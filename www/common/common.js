@@ -25,7 +25,7 @@ class Footer extends HTMLElement {
 				<div class="links">
 					<p><a href="/">TOP</a></p>
 				</div>
-				<p>© 2026 dkome</p>
+				<p>© 2026 ricevalley</p>
 			</footer>`;
 	}
 }
@@ -53,4 +53,5 @@ window.addEventListener('DOMContentLoaded', () => {
 	fontawesome_import.src = fontawesome_kit_path;
 	fontawesome_import.crossOrigin = 'anonymous';
 	document.head.appendChild(fontawesome_import);
+
 });
