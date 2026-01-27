@@ -23,7 +23,13 @@
 * Build a mobile app using Capacitor.
 
 How to use capacitor:https://capacitorjs.jp/
-
-
-
+<br>
+<br>
+<br>
+<br>
+This includes fonts distributed under the following [OFL License](https://openfontlicense.org/).
+<br>
+<br>
+<br>
+<br>
 © 2026 ricevalley
