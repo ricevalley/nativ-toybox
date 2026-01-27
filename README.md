@@ -18,9 +18,12 @@
 
 **Enter the location of the fontawesome kit in /common/common.js.**
 
-* Build a mobile app using Capacitor.
 * Use the browser with './dist' as the root directory.
 
+* Build a mobile app using Capacitor.
+
 How to use capacitor:https://capacitorjs.jp/
+
+
 
 © 2026 ricevalley
