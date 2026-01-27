@@ -1,0 +1,208 @@
+:root {
+	--main-color-light: #fdeff2;
+	--main-color-medium: #fccad5;
+	--main-color-strong: #fc97ad;
+	--main-color-outline: #fc325e;
+	--main-color-dark: #ccc0c2;
+	--main-color-text: #333031;
+	--main-color-line: #9a9a9a;
+
+	--header-title-font-size: 7.5vmin;
+	--header-height: calc((var(--header-title-font-size) * 1.2) + env(safe-area-inset-top));
+}
+@font-face {
+	/*
+		Read /src/fonts/OFL.txt
+	*/
+	font-family: 'ZenMaruGothic';
+	src: url('/src/fonts/ZenMaruGothic-Medium.ttf') format('truetype');
+}
+* {
+	margin: 0;
+	padding: 0;
+	font-family: ZenMaruGothic;
+}
+body {
+	background-color: var(--main-color-light);
+	position: relative;
+	min-height: 100vh;
+}
+p, a, td, th, li, span, label, input, textarea, button, div {
+	color: var(--main-color-text);
+}
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: var(--header-height);
+	background-color: #ffffff;
+	z-index: 1;
+}
+header p, header a {
+	line-height: 1.2;
+}
+.header-title a{
+	position: absolute;
+	bottom: 0;
+	font-size: var(--header-title-font-size);
+	color: var(--main-color-light);
+	-webkit-text-stroke: 0.1vmin var(--main-color-dark);
+	user-select: none;
+	text-decoration: none;
+}
+.header-links {
+	display: flex;
+	gap: 2vmin;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin-right: 2vmin;
+	font-size: 3.5vmin;
+}
+.header-links a {
+	color: var(--main-color-light);
+	text-decoration: none;
+	outline: none;
+	font-weight: bold;
+	-webkit-text-stroke: 0.05vmin var(--main-color-dark);
+}
+header p {
+	color: var(--main-color-light);
+	user-select: none;
+}
+main {
+	background-color: var(--main-color-light);
+	min-height: 80vmin;
+	padding-top: calc(5vmin + var(--header-height));
+	padding-bottom: 25vmin;
+}
+.background {
+	margin: auto;
+	width: 80vmin;
+	min-height: 80vmin;
+	background-color: #ffffff;
+	border-radius: 2vmin;
+	text-align: center;
+	padding: 1vmin 1vmin 3vmin 1vmin;
+}
+.title {
+	font-size: 5vmin;
+	color: var(--main-color-text);
+	margin-bottom: 1vmin;
+	user-select: none;
+}
+.basic-button {
+	display: block;
+	width: 9vmin;
+	height: 4vmin;
+	background-color: var(--main-color-medium);
+	cursor: pointer;
+	font-size: 2vmin;
+	border-radius: 2.2vmin;
+	border: solid var(--main-color-strong);
+	border-width: 0.2vmin;
+	outline: none;
+	color: var(--main-color-text);
+	margin: 3vmin auto 0 auto;
+	user-select: none;
+}
+.basic-button:focus {
+	outline: 0.3vmin solid var(--main-color-outline);
+	outline-offset: -0.2vmin;
+}
+.hr-default {
+	width: 85%;
+	margin: 3vmin auto;
+	height: 0.2vmin;
+	background-color: var(--main-color-line);
+	border: none;
+	border-radius: 0.1vmin;
+}
+footer {
+	padding-top: 2vmin;
+	background-color: var(--main-color-text);
+	text-align: center;
+	height: 20vmin;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.links {
+	margin-bottom: 2vmin;
+}
+.links a {
+	color: #ffffff;
+	text-decoration: none;
+	outline: none;
+}
+.links a:focus {
+	outline: 0.3vmin solid var(--main-color-outline);
+	outline-offset: 0;
+}
+footer p {
+	color: #ffffff;
+	font-size: 2vmin;
+}
+@media (max-width: 800px) {
+	:root {
+		--header-title-font-size: 10vmin;
+		--header-height: calc((var(--header-title-font-size) * 1.2) + env(safe-area-inset-top));
+	}
+	header {
+		height: var(--header-height);
+	}
+	.header-title a {
+		font-size: var(--header-title-font-size);
+	}
+	.header-links {
+		gap: 2.65vmin;
+		font-size: 4.65vmin;
+	}
+	main {
+		padding-top: calc(10vmin + var(--header-height));
+		padding-bottom: 55vmin;
+	}
+	.background {
+		width: calc(90vw - 2vmin);
+		min-height: 100vw;
+		border-radius: 2vmin;
+		padding: 1vmin 1vmin 3vmin 1vmin;
+	}
+	.title {
+		font-size: 10vmin;
+		margin-bottom: 1vmin;
+	}
+	.basic-button {
+		width: 18vmin;
+		height: 8vmin;
+		font-size: 4vmin;
+		border-radius: 4.4vmin;
+		margin: 4vmin auto 0 auto;
+		border-width: 0.2vmin;
+	}
+	.basic-button:focus {
+		outline: 0.6vmin solid var(--main-color-outline);
+		outline-offset: -0.4vmin;
+	}
+	.hr-default {
+		margin-top: 6vmin;
+		margin-bottom: 6vmin;
+		height: 0.4vmin;
+		border-radius: 0.2vmin;
+	}
+	footer {
+		padding-top: 5vmin;
+		height: 40vmin;
+	}
+	.links {
+		margin-bottom: 7vmin;
+	}
+	.links a:focus {
+		outline: 0.7vmin solid var(--main-color-outline);
+	}
+	footer p {
+		font-size: 5vmin;
+	}
+}

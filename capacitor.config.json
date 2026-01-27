@@ -1,0 +1,14 @@
+{
+	"appId": "xxx.xxx.xxx",
+	"appName": "Native-ToyBox",
+	"webDir": "www",
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 1000,
+			"launchAutoHide": true,
+			"backgroundColor": "#FDEFF2",
+			"androidScaleType": "CENTER_CROP",
+			"showSpinner": false
+		}
+	}
+}

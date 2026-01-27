@@ -1,0 +1,137 @@
+.background-toybox {
+	width: 80vw;
+	margin: auto;
+	min-height: auto;
+	background-color: var(--main-color-light);
+	border-radius: 0;
+	text-align: start;
+	padding: 0;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 5vmin;
+}
+.app-button-a {
+	display: block;
+	border-radius: 2vmin;
+	text-decoration: none;
+	width: fit-content;
+	outline: none;
+	box-shadow: none;
+	transition: box-shadow 0.2s ease-in-out;
+}
+.app-button-a:focus {
+	box-shadow: 0.25vmin 0.25vmin 0.25vmin var(--main-color-dark);
+	transition: box-shadow 0.2s ease-in-out;
+}
+.app-button-a:focus .hr-app-button {
+	width: 75%;
+	transition: width 0.2s ease-in-out;
+}
+.app-button {
+	text-align: center;
+	width: 35vmin;
+	height: 35vmin;
+	background-color: #ffffff;
+	cursor: pointer;
+	border-radius: 2vmin;
+	box-shadow: none;
+	transition: box-shadow 0.2s ease-in-out;
+}
+.app-button:hover {
+	box-shadow: 0.25vmin 0.25vmin 0.25vmin var(--main-color-dark);
+	transition: box-shadow 0.2s ease-in-out;
+}
+.app-button:hover .hr-app-button {
+	width: 75%;
+	transition: width 0.2s ease-in-out;
+}
+.app-title-area {
+	width: 100%;
+	padding: 1vmin 0;
+}
+.app-title {
+	line-height: 1.5;
+	font-size: 3.5vmin;
+	user-select: none;
+	color: var(--main-color-light);
+	-webkit-text-stroke: 0.1vmin var(--main-color-dark);
+	overflow: clip;
+	margin: 0 1vmin;
+	white-space: nowrap;
+}
+.hr-app-button {
+	border: none;
+	width: 80%;
+	height: 0.15vmin;
+	background-color: var(--main-color-dark);
+	margin: auto;
+	transition: width 0.2s ease-in-out;
+}
+.app-text-area {
+	width: 100%;
+	height: calc(100% - 9.4vmin);
+	padding: 1vmin 0;
+}
+.app-text {
+	font-size: 2vmin;
+	max-height: 100%;
+	user-select: none;
+	color: var(--main-color-dark);
+	overflow: clip;
+	margin: 0 1vmin;
+}
+@media (max-width: 800px) {
+	.app-button-a {
+		border-radius: 4vmin;
+		transition: box-shadow 0.2s ease-in-out;
+	}
+	.app-button-a:focus {
+		box-shadow: 0.5vmin 0.5vmin 0.5vmin var(--main-color-dark);
+		transition: box-shadow 0.2s ease-in-out;
+	}
+	.app-button-a:focus .hr-app-button {
+		transition: width 0.2s ease-in-out;
+	}
+	.app-button {
+		width: 70vmin;
+		height: 70vmin;
+		border-radius: 4vmin;
+		transition: box-shadow 0.2s ease-in-out;
+	}
+	.app-button:hover {
+		box-shadow: 0.5vmin 0.5vmin 0.5vmin var(--main-color-dark);
+		transition: box-shadow 0.2s ease-in-out;
+	}
+	.app-button:hover .hr-app-button {
+		width: 75%;
+		transition: width 0.2s ease-in-out;
+	}
+	.app-title-area {
+		width: 100%;
+		padding: 2vmin 0;
+	}
+	.app-title {
+		line-height: 1.5;
+		font-size: 7vmin;
+		-webkit-text-stroke: 0.2vmin var(--main-color-dark);
+		margin: 0 2vmin;
+	}
+	.hr-app-button {
+		width: 80%;
+		height: 0.30vmin;
+		transition: width 0.2s ease-in-out;
+	}
+	.app-text-area {
+		width: 100%;
+		height: calc(100% - 18.8vmin);
+		padding: 2vmin 0;
+	}
+	.app-text {
+		font-size: 4vmin;
+		max-height: 100%;
+		margin: 0 2vmin;
+	}
+}

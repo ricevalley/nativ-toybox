@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<link rel="stylesheet" type="text/css" href="/common/common.css">
+	<link rel="stylesheet" type="text/css" href="./money_diary.css">
+	<script>
+	//common_set
+	const commonset_page_title = 'Money Diary | Native-ToyBox';
+	const commonset_header_title = 'money diary';
+	const header_enable = true;
+
+	console.log('please import your fontawesome.\n./index.html');
+	</script>
+	<script type="module" src="/common/common.js"></script>
+	<!--↓import your fontawesome kit-->
+	<script src="" crossorigin="anonymous"></script>
+</head>
+<body>
+	<set-header></set-header>
+	<main>
+		<div class="background">
+			<p class="title">Money Diary</p>
+			<hr class="hr-default">
+
+			<div id="display_area">
+				<div class="month">
+					<div class="select-month">
+						<div class="btn-selecter-area">
+							<label for="month_selector" id="lab_month_selector"></label>
+							<input type="month" id="month_selector">
+							<button class="transition-btn" id="btn_transition_edit">Add</button>
+						</div>
+					</div>
+					<table class="month-table">
+						<colgroup>
+							<col class="col-item">
+							<col class="cal-money">
+							<col class="cal-mom">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th class="month-td-item">集計</th>
+								<th class="month-td-money">金額</th>
+								<th class="month-td-mom">前月比</th>
+							</tr>
+							<tr>
+								<td class="month-td-item"><span class="span-td-month"></span>月の総収入</td>
+								<td class="month-td-money" id="td_month_income_amount">-</td>
+								<td class="month-td-mom" id="td_month_income_mom">-</td>
+							</tr>
+							<tr>
+								<td class="month-td-item"><span class="span-td-month"></span>月の総支出</td>
+								<td class="month-td-money" id="td_month_expense_amount">-</td>
+								<td class="month-td-mom" id="td_month_expense_mom">-</td>
+							</tr>
+							<tr>
+								<td class="month-td-item"><span class="span-td-month"></span>月の収支差額</td>
+								<td class="month-td-money" id="td_month_difference_amount">-</td>
+								<td class="month-td-mom" id="td_month_difference_mom">-</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="filter-title-area">
+					<p class="table-title">
+						<span id="table_title"></span>
+					</p>
+					<div class="filter-area">
+						<div class="select-cover">
+							<select id="sort_order">
+								<option value="added">追加順</option>
+								<option value="date_ascending">日付昇順</option>
+								<option value="date_descending">日付降順</option>
+								<option value="amount_ascending">金額昇順</option>
+								<option value="amount_descending">金額降順</option>
+							</select>
+						</div>
+						<input type="checkbox" id="minus_checked">
+						<label for="minus_checked" class="check-lab">支出を非表示</label>
+						<input type="checkbox" id="plus_checked">
+						<label for="plus_checked" class="check-lab">収入を非表示</label>
+					</div>
+				</div>
+				<table class="money-table">
+					<colgroup>
+						<col class="col-date">
+						<col class="cal-detail">
+						<col class="cal-money">
+					</colgroup>
+					<tbody id="tbody_money">
+						<tr>
+							<th class="money-td-date">日付</th>
+							<th class="money-td-detail">内容</th>
+							<th class="money-td-money">金額</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div id="edit_area" class="is-hidden">
+				<div class="guid-btn-area">
+					<p id="form_guide"></p>
+					<button class="transition-btn" id="btn_transition_table">Table</button>
+				</div>
+				<form>
+					<div class="form-area">
+						<div class="edit-part">
+							<p>内容 <span class="required">*</span></p>
+							<input type="text" class="form-text" id="edit_detail" required>
+						</div>
+						<div class="edit-part">
+							<p>金額 <span class="required">*</span></p>
+							<input type="number" class="form-text form-num" id="edit_money" required>
+						</div>
+						<div class="edit-part">
+							<p>備考</p>
+							<input type="text" class="form-text" id="edit_note">
+						</div>
+						<div class="edit-part">
+							<p>日付 <span class="required">*</span></p>
+							<label for="input_date_edit" id="lab_input_date" tabindex="0"></label>
+							<input type="date" class="form-date" id="input_date_edit" tabindex="-1" required>
+						</div>
+						<div class="form-btn-area">
+							<button type="submit" class="edit-btn btn-submit" id="btn_submit">Add</button>
+							<button type="submit" class="edit-btn btn-delete is-hidden" id="btn_delete">Delete</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+	<set-footer></set-footer>
+	<script src="./money_diary.js"></script>
+</body>
+</html>
