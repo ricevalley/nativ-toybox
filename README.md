@@ -3,7 +3,7 @@
 'Nativ-ToyBox' is a Capacitor project that bundles multiple apps.
 
 # Included apps
-* Monay Diary
+* Money Diary
 
 # Required Modules
 
