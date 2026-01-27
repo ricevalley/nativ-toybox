@@ -16,7 +16,7 @@
 
 # Usage
 
-**Enter the location of the fontawesome kit in /common/common.js.**
+**Enter the location of the fontawesome kit in /www/common/common.js.**
 
 * Use the browser with './dist' as the root directory.
 
