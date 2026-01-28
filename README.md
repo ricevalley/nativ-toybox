@@ -22,6 +22,7 @@
 * Build a mobile app using Capacitor.
 
 How to use capacitor:https://capacitorjs.jp/
+Font Awesome:https://fontawesome.com/kits/
 <br>
 <br>
 <br>
