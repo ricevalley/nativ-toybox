@@ -1,7 +1,3 @@
-//↓ fontawesome_kit_path
-const fontawesome_kit_path = '';
-if (!fontawesome_kit_path) console.error('Edit \'/common/common.js\' and import fontawesome.');
-
 class Header extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
@@ -30,9 +26,37 @@ class Footer extends HTMLElement {
 	}
 }
 
+const config_json = '/config.json';
+
+async function fetch_config() {
+	try {
+		const res = await fetch(config_json);
+		if (!res.ok) {
+			throw new Error(`error status: ${res.status}`);
+		}
+
+		return await res.json();
+	} catch (e) {
+		console.error(e);
+	}
+}
+
 window.addEventListener('DOMContentLoaded', () => {
 	customElements.define('set-header', Header);
 	customElements.define('set-footer', Footer);
+
+	//fontawesome
+	let fontawesome_kit_path = '';
+	fetch_config().then(data => {
+		fontawesome_kit_path = data['fontAwesomeKitPath'];
+
+		if (!fontawesome_kit_path) console.error('Edit \'/config.json\' and import fontawesome.');
+
+		const fontawesome_import = document.createElement('script');
+		fontawesome_import.src = fontawesome_kit_path;
+		fontawesome_import.crossOrigin = 'anonymous';
+		document.head.appendChild(fontawesome_import);
+	});
 
 	//head
 	const common_head = `
@@ -47,11 +71,4 @@ window.addEventListener('DOMContentLoaded', () => {
 		<link rel="manifest" href="/manifest.json">
 	`;
 	document.head.insertAdjacentHTML('beforeend', common_head);
-
-	//fontawesome
-	const fontawesome_import = document.createElement('script');
-	fontawesome_import.src = fontawesome_kit_path;
-	fontawesome_import.crossOrigin = 'anonymous';
-	document.head.appendChild(fontawesome_import);
-
 });

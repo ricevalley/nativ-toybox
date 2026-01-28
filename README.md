@@ -7,7 +7,7 @@
 
 # Required Modules
 
-*	@capacitor/android 8.0.1
+* @capacitor/android 8.0.1
 * @capacitor/assets 3.0.5
 * @capacitor/cli 8.0.1
 * @capacitor/core 8.0.1
@@ -16,7 +16,7 @@
 
 # Usage
 
-**Enter the location of the fontawesome kit in /www/common/common.js.**
+**Enter the location of the fontawesome kit in /www/config.json.**
 
 * Use the browser with './dist' as the root directory.
 
