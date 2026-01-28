@@ -12,7 +12,6 @@
 * @capacitor/cli 8.0.1
 * @capacitor/core 8.0.1
 * @capacitor/splash-screen 8.0.0
-* @capacitor/status-bar 8.0.0
 
 # Usage
 
