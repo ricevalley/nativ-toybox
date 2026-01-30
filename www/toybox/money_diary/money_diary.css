@@ -211,6 +211,7 @@ div.is-hidden, button.is-hidden {
 	outline: none;
 	cursor: pointer;
 	appearance: none;
+	background-color: #fff;
 }
 .select-cover {
 	width: fit-content;

@@ -2,7 +2,7 @@
 
 'Nativ-ToyBox' is a Capacitor project that bundles multiple apps.
 
-# Included apps
+# Included Apps
 * Money Diary
 
 # Required Modules
@@ -15,15 +15,11 @@
 
 # Usage
 
-**Enter the location of the fontawesome kit in /www/config.json.**
-
 * Use the browser with './dist' as the root directory.
 
 * Build a mobile app using Capacitor.
 
 How to use capacitor:https://capacitorjs.jp/
-
-Font Awesome:https://fontawesome.com/kits/
 <br>
 <br>
 <br>

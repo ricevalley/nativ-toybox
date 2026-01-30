@@ -45,19 +45,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	customElements.define('set-header', Header);
 	customElements.define('set-footer', Footer);
 
-	//fontawesome
-	let fontawesome_kit_path = '';
-	fetch_config().then(data => {
-		fontawesome_kit_path = data['fontAwesomeKitPath'];
-
-		if (!fontawesome_kit_path) console.error('Edit \'/config.json\' and import fontawesome.');
-
-		const fontawesome_import = document.createElement('script');
-		fontawesome_import.src = fontawesome_kit_path;
-		fontawesome_import.crossOrigin = 'anonymous';
-		document.head.appendChild(fontawesome_import);
-	});
-
 	//head
 	const common_head = `
 		<title>${typeof commonset_page_title !== 'undefined' ? commonset_page_title : 'not-set | Not-set'}</title>
@@ -68,6 +55,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		<link rel="icon" type="image/png" sizes="192x192" href="/src/icons/icon-192.png">
 		<link rel="icon" type="image/png" sizes="256x256" href="/src/icons/icon-256.png">
 		<link rel="icon" type="image/png" sizes="512x512" href="/src/icons/icon-512.png">
+		<link rel="stylesheet" type="text/css" href="/common/fontawesome.all.min.css">
 		<link rel="manifest" href="/manifest.json">
 	`;
 	document.head.insertAdjacentHTML('beforeend', common_head);
